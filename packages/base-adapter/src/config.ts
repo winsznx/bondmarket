@@ -5,14 +5,14 @@ export const baseConfig = {
     networks: [base, baseSepolia],
     defaultNetwork: baseSepolia,
     metadata: {
-        name: 'ChainRegistry',
-        description: 'Decentralized username registry',
-        url: 'https://chainregistry.app',
-        icons: ['https://chainregistry.app/icon.png']
+        name: 'BondMarket',
+        description: 'Peer-to-peer bond issuance and trading platform on Base and Stacks blockchains.',
+        url: 'https://bondmarket.app',
+        icons: ['https://bondmarket.app/icon.png']
     }
 };
 
 export const CONTRACT_ADDRESSES = {
-    [base.id]: '0x0000000000000000000000000000000000000000', // Replace after deployment
-    [baseSepolia.id]: '0x0000000000000000000000000000000000000000' // Replace after deployment
+    [base.id]: process.env.NEXT_PUBLIC_BASE_CONTRACT_ADDRESS || '',
+    [baseSepolia.id]: process.env.NEXT_PUBLIC_BASE_SEPOLIA_CONTRACT_ADDRESS || ''
 };
